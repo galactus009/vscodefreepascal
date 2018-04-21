@@ -1,0 +1,63 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    // https://code.visualstudio.com/docs/editor/variables-reference
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Free Pascal: Compile",
+            "type": "process",
+            "command": "/usr/local/bin/fpc",
+            "args": [ "${file}"],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "presentation": {
+                "reveal": "always",
+                "panel": "new"
+            },
+            "problemMatcher": [
+             
+            ]
+        },
+        {
+            "label": "Free Pascal: Quick Run",
+            "type": "process",
+            "command": "/${fileDirname}/${fileBasenameNoExtension}",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": [
+             
+            ]
+        },
+        {
+            "label": "Free Pascal: Beautify this file",
+            "type": "process",
+            "command": "ptop",
+            "args" : [ "${file}","${file}",],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": [
+             
+            ]
+            
+        },
+        {
+            "label": "Free Pascal: Clean Artifacts",
+            "type": "process",
+            "command": "delp",
+            "args" : [ "${fileDirname}",],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+        },
+        "problemMatcher": [
+             
+        ]
+    ]
+}
