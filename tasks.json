@@ -15,23 +15,31 @@
             },
             "presentation": {
                 "reveal": "always",
-                "panel": "new"
+                "panel": "shared",
+                "focus": false
             },
             "problemMatcher": [
              
-            ]
+            ],
+            "dependsOn" : "Free Pascal: Clean Build Artifacts"
         },
         {
-            "label": "Free Pascal: Quick Run",
+            "label": "Free Pascal: Quick Compile & Run",
             "type": "process",
             "command": "/${fileDirname}/${fileBasenameNoExtension}",
             "group": {
                 "kind": "build",
                 "isDefault": true
             },
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared",
+                "focus": true
+            },
             "problemMatcher": [
              
-            ]
+            ],
+            "dependsOn" : "Free Pascal: Compile"
         },
         {
             "label": "Free Pascal: Beautify this file",
@@ -41,6 +49,11 @@
             "group": {
                 "kind": "build",
                 "isDefault": true
+            },
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared",
+                "focus": false
             },
             "problemMatcher": [
              
@@ -55,6 +68,11 @@
             "group": {
                 "kind": "build",
                 "isDefault": true
+        },
+        "presentation": {
+            "reveal": "always",
+            "panel": "shared",
+            "focus": false
         },
         "problemMatcher": [
              
